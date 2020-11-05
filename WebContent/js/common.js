@@ -90,8 +90,7 @@ function sendToboardList(code) {
 function openPopCommunity() {
 	var community = document.getElementById("community");
 	var idcheck = sessionStorage.getItem('userid');
-
-	if (idcheck == null) {
+	if (myPage == null) {
 		openPopLogin("떠들썩은 로그인 후 이용가능합니다!");
 	} else {
 		community.style.display = "block";
@@ -698,4 +697,15 @@ function selectOption(array, option) {
 			choiceArea(array[i]);
 		}
 	}
+}
+
+function searchKeyword(){
+	$.ajax({
+		type : "post",
+		url : "/SpringTeamProject/view/searchKeyword2",
+		contentType : "application/x-www-form-urlencoded; charset=UTF-8",
+		success : function(imgpath) {
+			$('#wordcloud').empty().append("<img src=\"/SpringTeamProject"+ imgpath +"\" alt=\"temp2\" style=\"width:800px;\" />");
+		}
+	});
 }

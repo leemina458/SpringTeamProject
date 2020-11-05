@@ -121,4 +121,10 @@ public class KeywordController {
 
 		return "";
 	}
+	
+	@RequestMapping("/view/searchKeyword2")
+	@ResponseBody
+	public String searchKeyword2() {
+		return "/images/Rplot.png";
+	}
 }

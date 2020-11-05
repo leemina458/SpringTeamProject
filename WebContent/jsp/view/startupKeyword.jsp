@@ -42,13 +42,13 @@
 			</div>
 					
 			<!-- 검색버튼 -->
-			<button type="submit" class="btn-full btn01-reverse">검색</button>
+			<input type="button" onclick="javascript:searchKeyword()" class="btn-full btn01-reverse" value="검색">
 		</form>
 		<!-- search of end -->
 		
 		<!-- content -->
 		<div class="content">
-			<div class="wordcloud"><img src="<%=request.getContextPath()%>/images/temp2.png" alt="temp2" style="width:600px;" /></div>
+			<div class="wordcloud" id="wordcloud"><img src="<%=request.getContextPath()%>/images/temp2.png" alt="temp2" style="width:600px;" /></div>
 			<table class="tbl">
 				<tr>
 					<td>1위</td>
